@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Art Institute of Chicago Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+      defer
+    ></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header class="grid">
+      <a
+        href="https://www.artic.edu/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="logo-anchor"
+      >
+        <img
+          src="https://raw.githubusercontent.com/Art-Institute-of-Chicago/template/master/aic-logo.gif"
+          alt="logo"
+          class="logo"
+        />
+      </a>
+      <h1>Art Institute of Chicago Gallery</h1>
+    </header>
+    <main class="grid">
+      <div class="intro">
+        This is a small sample of some of the art I enjoy from the Art Institute
+        of Chicago. You can click on each piece of art to get more info. This is
+        all made available by the
+        <a
+          href="https://api.artic.edu/docs/#introduction"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Art Institute of Chicago API</a
+        >.
+      </div>
+
+      <div class="container">
+        <div class="box">
+          <img
+            id="120171"
+            class="toggle-img"
+            data-target="box1"
+            src="https://www.artic.edu/iiif/2/1dec252a-a3bd-aa36-8085-96eba58cdf07/full/843,/0/default.jpg"
+            alt="An Aragonese Smuggler"
+          />
+          <div id="box1" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            id="8991"
+            class="toggle-img"
+            data-target="box2"
+            src="https://www.artic.edu/iiif/2/9e00e226-9264-cda0-2893-685e0ca5b285/full/843,/0/default.jpg"
+            alt="Improvisation No. 30 (Cannons)"
+          />
+          <div id="box2" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            id="97050"
+            class="toggle-img"
+            data-target="box3"
+            src="https://www.artic.edu/iiif/2/22396a80-b571-6e20-944c-acff71cb65fe/full/843,/0/default.jpg"
+            alt="Drawing #402"
+          />
+          <div id="box3" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            id="15468"
+            class="toggle-img"
+            data-target="box4"
+            src="https://www.artic.edu/iiif/2/8a0e4ac9-43ea-bc3e-884b-ee27f8a10501/full/843,/0/default.jpg"
+            alt="Saint George and the Dragon"
+          />
+          <div id="box4" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            id="97910"
+            class="toggle-img"
+            data-target="box5"
+            src="https://www.artic.edu/iiif/2/375c77df-2819-fe65-f129-c3bc6ea2ce37/full/843,/0/default.jpg"
+            alt="The Advance-Guard, or The Military Sacrifice (The Ambush)"
+          />
+          <div id="box5" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            id="234972"
+            class="toggle-img"
+            data-target="box6"
+            src="https://www.artic.edu/iiif/2/cd773e50-2f0f-9d5d-e112-a5271164abf2/full/843,/0/default.jpg"
+            alt="Small Town by Day"
+          />
+          <div id="box6" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            id="64729"
+            class="toggle-img"
+            data-target="box7"
+            src="https://www.artic.edu/iiif/2/ef96e79b-f481-8114-0804-4bd39c101983/full/843,/0/default.jpg"
+            alt="Early Morning, Tarpon Springs"
+          />
+          <div id="box7" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            id="117188"
+            class="toggle-img"
+            data-target="box8"
+            src="https://www.artic.edu/iiif/2/da65d795-bcc7-90e6-769e-f431d67a8c2d/full/843,/0/default.jpg"
+            alt="The Earth is Man"
+          />
+          <div id="box8" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            id="111629"
+            class="toggle-img"
+            data-target="box9"
+            src="https://www.artic.edu/iiif/2/e707e79a-b668-91a3-e580-40b3e4d17317/full/843,/0/default.jpg"
+            alt="Beauford Delaney Self Portrait"
+          />
+          <div id="box9" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            id="9015"
+            class="toggle-img"
+            data-target="box10"
+            src="https://www.artic.edu/iiif/2/a0926588-779d-3440-adf6-881d15ddbf2f/full/843,/0/default.jpg"
+            alt="Thirst"
+          />
+          <div id="box10" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            id="30341"
+            class="toggle-img"
+            data-target="box11"
+            src="https://www.artic.edu/iiif/2/3f3c5575-a5fd-013c-fb11-bdb9feae26a8/full/843,/0/default.jpg"
+            alt="Lovis Corinth Self Portrait"
+          />
+          <div id="box11" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            id="119521"
+            class="toggle-img"
+            data-target="box12"
+            src="https://www.artic.edu/iiif/2/f73dcb2d-1efb-c4a9-7c8a-95facc266ed8/full/843,/0/default.jpg"
+            alt="Landscape at L'Estaque"
+          />
+          <div id="box12" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            id="40619"
+            class="toggle-img"
+            data-target="box13"
+            src="https://www.artic.edu/iiif/2/81b5faed-1b74-4689-ae83-50fcd5e8f32e/full/843,/0/default.jpg"
+            alt="Zapata"
+          />
+          <div id="box13" class="hidden-box">
+            <div class="title"></div>
+            <div class="artist"></div>
+            <div class="year"></div>
+            <div class="medium"></div>
+            <div class="description"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

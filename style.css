@@ -1,0 +1,94 @@
+/* reset */
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  background-color: rgb(245, 234, 220);
+  color: #881616;
+}
+
+a {
+  text-decoration: none;
+  align-self: center;
+}
+
+.intro a {
+  color: #881616;
+  text-decoration: underline;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+
+header {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.logo-anchor {
+  grid-column: 2 / span 2;
+}
+
+h1 {
+  grid-column: 7 / span 5;
+  text-align: center;
+  align-self: center;
+}
+
+main {
+  margin: 40px 0;
+}
+
+.intro {
+  grid-column: 2/12;
+  margin: auto;
+  margin-bottom: 30px;
+  color: black;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+  column-gap: 10px;
+  object-fit: contain;
+  grid-column: span 12;
+}
+
+.box {
+  max-width: 80%;
+  padding: 15px;
+  background-color: rgb(53, 40, 40);
+  margin: 0 auto;
+  margin-bottom: 15px;
+  break-inside: avoid;
+  border: 1px solid black;
+}
+
+.box img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.hidden-box {
+  display: none;
+  max-width: 100%;
+  background-color: rgb(245, 234, 220);
+  padding: 10px 5px;
+  text-align: center;
+  color: black;
+}
+
+@media (min-width: 860px) {
+  .intro {
+    grid-column: 3 / span 8;
+    max-width: 100%;
+  }
+
+  .container {
+    columns: 3;
+    grid-column: 2/12;
+    max-width: 100%;
+  }
+}
